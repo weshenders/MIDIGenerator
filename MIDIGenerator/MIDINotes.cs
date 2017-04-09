@@ -17,7 +17,7 @@ namespace MIDIGenerator
 
         static readonly int[] CKeys = new int[]
         {
-            0x00, 0x0C, 0x18, 0x24, 0x30, 0x3C, 0x48, 0x54, 0x60, 0x6C
+            0x00,0x0C,0x18,0x24,0x30,0x3C,0x48,0x54,0x60,0x6C
         };
         static readonly int[] CSKeys = new int[]
         {
@@ -63,6 +63,7 @@ namespace MIDIGenerator
         {
             0x0A,0x16,0x22,0x2E,0x3A,0x46,0x52,0x5E,0x6A,0x76
         };
+        private int[] notesInKey = new int[30];
 
         public MIDINotes(int deltaTime)
         {
@@ -74,6 +75,85 @@ namespace MIDIGenerator
             {
                 this.quarterNote, this.eigthNote, this.sixteenthNote
             };
+        }
+
+        public void SetKey(string key)
+        {
+            switch (key)
+            {
+                case "C":
+                    CKeys.CopyTo(notesInKey, 0);
+                    EKeys.CopyTo(notesInKey, 10);
+                    GKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "C#":
+                case "Db":
+                    CSKeys.CopyTo(notesInKey, 0);
+                    FKeys.CopyTo(notesInKey, 10);
+                    GSKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "D":
+                    DKeys.CopyTo(notesInKey, 0);
+                    FSKeys.CopyTo(notesInKey, 10);
+                    AKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "D#":
+                case "Eb":
+                    EbKeys.CopyTo(notesInKey, 0);
+                    GKeys.CopyTo(notesInKey, 10);
+                    BbKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "E":
+                    EKeys.CopyTo(notesInKey, 0);
+                    GSKeys.CopyTo(notesInKey, 10);
+                    BKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "F":
+                    FKeys.CopyTo(notesInKey, 0);
+                    AKeys.CopyTo(notesInKey, 10);
+                    CKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "F#":
+                case "Gb":
+                    FSKeys.CopyTo(notesInKey, 0);
+                    BbKeys.CopyTo(notesInKey, 10);
+                    CSKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "G":
+                    GKeys.CopyTo(notesInKey, 0);
+                    BKeys.CopyTo(notesInKey, 10);
+                    DKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "G#":
+                case "Ab":
+                    GSKeys.CopyTo(notesInKey, 0);
+                    CKeys.CopyTo(notesInKey, 10);
+                    EbKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "A":
+                    AKeys.CopyTo(notesInKey, 0);
+                    CSKeys.CopyTo(notesInKey, 10);
+                    EKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "A#":
+                case "Bb":
+                    BbKeys.CopyTo(notesInKey, 0);
+                    DKeys.CopyTo(notesInKey, 10);
+                    FKeys.CopyTo(notesInKey, 20);
+                    break;
+                case "B":
+                    BKeys.CopyTo(notesInKey, 0);
+                    EbKeys.CopyTo(notesInKey, 10);
+                    FSKeys.CopyTo(notesInKey, 20);
+                    break;
+            }
+        }
+
+        public int GetRandomNote(string key)
+        {
+            int randomKey;
+            randomKey = notesInKey[random.Next(0, notesInKey.Length - 1)];
+            return randomKey;
         }
 
         public int GetRandomC()

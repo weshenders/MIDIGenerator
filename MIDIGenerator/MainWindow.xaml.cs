@@ -28,7 +28,7 @@ namespace MIDIGenerator
 
         private void btn_Generate_Click(object sender, RoutedEventArgs e)
         {
-            midiFile.NewTrack(30, "C#");
+            midiFile.NewTrack(30, this.cmb_Key.Text);
         }
     }
 }

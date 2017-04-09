@@ -9,19 +9,24 @@
     <Grid>
         <Label Content="Key:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_Generate" Content="Generate Midi" HorizontalAlignment="Left" Margin="46,48,0,0" VerticalAlignment="Top" Width="120" Click="btn_Generate_Click"/>
-        <ComboBox HorizontalAlignment="Left" Margin="46,14,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Name="keyA">A</ComboBoxItem>
-            <ComboBoxItem Name="keyAS">A#</ComboBoxItem>
-            <ComboBoxItem Name="keyB">B</ComboBoxItem>
-            <ComboBoxItem Name="keyBS">B#</ComboBoxItem>
+        <ComboBox x:Name="cmb_Key" HorizontalAlignment="Left" Margin="46,14,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Name="keyC">C</ComboBoxItem>
             <ComboBoxItem Name="keyCS">C#</ComboBoxItem>
+            <ComboBoxItem Name="keyDb">Db</ComboBoxItem>
             <ComboBoxItem Name="keyD">D</ComboBoxItem>
             <ComboBoxItem Name="keyDS">D#</ComboBoxItem>
+            <ComboBoxItem Name="keyEb">Eb</ComboBoxItem>
             <ComboBoxItem Name="keyE">E</ComboBoxItem>
-            <ComboBoxItem Name="keyES">E#</ComboBoxItem>
             <ComboBoxItem Name="keyF">F</ComboBoxItem>
             <ComboBoxItem Name="keyFS">F#</ComboBoxItem>
+            <ComboBoxItem Name="keyGb">Gb</ComboBoxItem>
+            <ComboBoxItem Name="keyG">G</ComboBoxItem>
+            <ComboBoxItem Name="keyGS">G#</ComboBoxItem>
+            <ComboBoxItem Name="keyAb">Ab</ComboBoxItem>
+            <ComboBoxItem Name="keyA">A</ComboBoxItem>
+            <ComboBoxItem Name="keyAS">A#</ComboBoxItem>
+            <ComboBoxItem Name="keyBb">Bb</ComboBoxItem>
+            <ComboBoxItem Name="keyB">B</ComboBoxItem>
         </ComboBox>
 
     </Grid>
