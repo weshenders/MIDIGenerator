@@ -1,0 +1,28 @@
+﻿<Window x:Class="MIDIGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MIDIGenerator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Label Content="Key:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Generate" Content="Generate Midi" HorizontalAlignment="Left" Margin="46,48,0,0" VerticalAlignment="Top" Width="120" Click="btn_Generate_Click"/>
+        <ComboBox HorizontalAlignment="Left" Margin="46,14,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Name="keyA">A</ComboBoxItem>
+            <ComboBoxItem Name="keyAS">A#</ComboBoxItem>
+            <ComboBoxItem Name="keyB">B</ComboBoxItem>
+            <ComboBoxItem Name="keyBS">B#</ComboBoxItem>
+            <ComboBoxItem Name="keyC">C</ComboBoxItem>
+            <ComboBoxItem Name="keyCS">C#</ComboBoxItem>
+            <ComboBoxItem Name="keyD">D</ComboBoxItem>
+            <ComboBoxItem Name="keyDS">D#</ComboBoxItem>
+            <ComboBoxItem Name="keyE">E</ComboBoxItem>
+            <ComboBoxItem Name="keyES">E#</ComboBoxItem>
+            <ComboBoxItem Name="keyF">F</ComboBoxItem>
+            <ComboBoxItem Name="keyFS">F#</ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Window>
