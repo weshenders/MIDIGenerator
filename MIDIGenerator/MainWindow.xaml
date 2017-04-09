@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Label Content="Key:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn_Generate" Content="Generate Midi" HorizontalAlignment="Left" Margin="46,48,0,0" VerticalAlignment="Top" Width="120" Click="btn_Generate_Click"/>
+        <Button x:Name="btn_Generate" Content="Generate Midi" HorizontalAlignment="Left" Margin="46,76,0,0" VerticalAlignment="Top" Width="120" Click="btn_Generate_Click"/>
         <ComboBox x:Name="cmb_Key" HorizontalAlignment="Left" Margin="46,14,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Name="keyC">C</ComboBoxItem>
             <ComboBoxItem Name="keyCS">C#</ComboBoxItem>
@@ -28,6 +28,12 @@
             <ComboBoxItem Name="keyBb">Bb</ComboBoxItem>
             <ComboBoxItem Name="keyB">B</ComboBoxItem>
         </ComboBox>
+        <Label Content="Instrument 1" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Instrument 2" HorizontalAlignment="Left" Margin="195,42,0,0" VerticalAlignment="Top"/>
+        <Label Content="Instrument 3" HorizontalAlignment="Left" Margin="195,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.789,-1.269"/>
+        <ComboBox x:Name="cmb_Insturment1" HorizontalAlignment="Left" Margin="277,14,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmb_Insturment2" HorizontalAlignment="Left" Margin="277,46,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmb_Insturment3" HorizontalAlignment="Left" Margin="277,77,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

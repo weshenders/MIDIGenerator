@@ -79,6 +79,7 @@ namespace MIDIGenerator
 
         public void SetKey(string key)
         {
+            Array.Clear(notesInKey, 0, notesInKey.Length);
             switch (key)
             {
                 case "C":
@@ -149,33 +150,20 @@ namespace MIDIGenerator
             }
         }
 
-        public int GetRandomNote(string key)
+        public int GetRandomNote()
         {
             int randomKey;
             randomKey = notesInKey[random.Next(0, notesInKey.Length - 1)];
             return randomKey;
         }
 
-        public int GetRandomC()
+        public int GetRandomNoteType()
         {
-            var randomC = new int[CKeys.Length + EKeys.Length + GKeys.Length];
-            CKeys.CopyTo(randomC, 0);
-            EKeys.CopyTo(randomC, CKeys.Length);
-            GKeys.CopyTo(randomC, CKeys.Length+EKeys.Length);
-            return randomC[random.Next(0, randomC.Length - 1)];
+            return noteTypes[random.Next(0, noteTypes.Length)];
         }
-        public int GetRandomCS()
+        public int GetRandomVolume()
         {
-            var randomCS = new int[CSKeys.Length + EKeys.Length + GSKeys.Length];
-            CSKeys.CopyTo(randomCS, 0);
-            EKeys.CopyTo(randomCS, CKeys.Length);
-            GSKeys.CopyTo(randomCS, CKeys.Length + EKeys.Length);
-            return randomCS[random.Next(0, randomCS.Length - 1)];
-        }
-
-        public int GetRandomNote()
-        {
-            return noteTypes[random.Next(0, noteTypes.Length - 1)];
+            return random.Next(0x20, 0x60);
         }
     }
 }
